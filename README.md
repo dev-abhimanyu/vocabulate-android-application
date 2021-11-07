@@ -8,13 +8,8 @@ Vocabulate - An android application to improve vocabulary
 * Learn atleast a new word every day with "Word of the day" notification channel
 * Completely offline
 
-![splash](/ss/splash.png)![ob1](/ss/ob1.png)![ob2](/ss/ob2.png)
-![ob3](/ss/ob3.png)
-![ob4](/ss/ob4.png)
-![main](/ss/main.png)
-![quiz](/ss/quiz.png)
-![bookmarks](/ss/bookmarks.png)
-![bookmarks2](/ss/bookmarks2.png)
+![ob1](/ss/ob1.png) ![ob2](/ss/ob2.png)
+![ob3](/ss/ob3.png) ![ob4](/ss/ob4.png)
 ![ss1](/ss/ss1.jpg)
 ![ss2](/ss/ss2.jpg)
 ![ss3](/ss/ss3.jpg)
