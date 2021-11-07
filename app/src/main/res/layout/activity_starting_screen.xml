@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/StartingScreenLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/start_screen_bg1"
+    android:padding="16dp"
+    tools:context=".StartingScreenActivity">
+
+    <ImageView
+        android:id="@+id/mainNotepad"
+        android:layout_width="317dp"
+        android:layout_height="366dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainHeading"
+        app:srcCompat="@drawable/main_notepad_extended" />
+
+    <TextView
+        android:id="@+id/mainHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/start_heading"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" /><!--textSize="55sp"-->
+
+    <TextView
+        android:id="@+id/text_view_highscore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:drawableStart="@drawable/gray_leaves_left"
+        android:drawableEnd="@drawable/gray_leaves_right"
+        android:text="0"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/highscore_text"
+        app:layout_constraintTop_toBottomOf="@+id/bookmarkButton" />
+
+    <Button
+        android:id="@+id/button_start_quiz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="-5dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="5dp"
+        android:background="@android:color/transparent"
+        android:drawableEnd="@drawable/play_button"
+        android:text="Start"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="@+id/mainNotepad"
+        app:layout_constraintStart_toStartOf="@+id/mainNotepad"
+        app:layout_constraintTop_toTopOf="@+id/mainNotepad" />
+
+    <Spinner
+        android:id="@+id/spinner_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/button_start_quiz"
+        app:layout_constraintTop_toBottomOf="@+id/button_start_quiz" />
+
+    <Spinner
+        android:id="@+id/spinner_difficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/button_start_quiz"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_category" />
+
+    <Button
+        android:id="@+id/bookmarkButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@android:color/transparent"
+        android:drawableEnd="@drawable/bookmark_main_button"
+        android:text="Bookmarks"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/mainNotepad"
+        app:layout_constraintStart_toStartOf="@+id/mainNotepad"
+        app:layout_constraintTop_toBottomOf="@+id/button_start_quiz" />
+
+
+    <TextView
+        android:id="@+id/highscore_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Highscore: "
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/mainNotepad"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="@+id/mainNotepad"
+        app:layout_constraintTop_toBottomOf="@+id/bookmarkButton" />
+
+    <ToggleButton
+        android:id="@+id/wotd_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:checked="false"
+        android:drawableStart="@drawable/yes_wotd"
+        android:drawablePadding="3dp"
+        android:text="ToggleButton"
+        android:textOff="Word of the day"
+        android:textOn="Word of the day"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/mainNotepad"
+        app:layout_constraintEnd_toEndOf="@+id/mainNotepad"
+        app:layout_constraintStart_toStartOf="@+id/mainNotepad" />
+
+    <Button
+        android:id="@+id/score_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:drawableStart="@drawable/score_reset"
+        android:drawablePadding="3dp"
+        android:text="Reset"
+        android:textAlignment="textStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/mainNotepad"
+        app:layout_constraintEnd_toStartOf="@+id/wotd_button" />
+
+    <Button
+        android:id="@+id/rate_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="-60dp"
+        android:background="@android:color/transparent"
+        android:drawableStart="@drawable/like"
+        android:drawablePadding="2dp"
+        android:text=" Rate"
+        android:textAlignment="textStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/mainNotepad"
+        app:layout_constraintEnd_toEndOf="@+id/mainNotepad"
+        app:layout_constraintStart_toEndOf="@+id/wotd_button" />
+</androidx.constraintlayout.widget.ConstraintLayout>
