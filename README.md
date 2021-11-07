@@ -2,7 +2,11 @@
 Vocabulate - An android application to improve vocabulary
 ## Intro
 ![banner](/ss/feature_graphic.jpg)
-**Vocabulate** is an android application aimed to improve the vocabulary of the user and also prepare them for English proficiency exams which rely heavily comprehensive vocabulary. 
+**Vocabulate** is an android application aimed to improve the vocabulary of the user and also prepare them for English proficiency exams which rely heavily comprehensive vocabulary. The application has been developed in **Android Studio** using **Java**, **XML** and **SQLite** with graphics designed using **Adobe Photoshop** and **Adobe Illustrator**.
+
+Download the application now from Google Play Store: Vocabulate
+
+## Features
 * User-friendly quiz format with score tracker 
 * Bookmark difficult words to review them later
 * Learn atleast a new word every day with "Word of the day" notification channel
