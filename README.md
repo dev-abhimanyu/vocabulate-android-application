@@ -10,8 +10,6 @@ Vocabulate - An android application to improve vocabulary
 
 ![ob1](/ss/ob1.png) ![ob2](/ss/ob2.png)
 ![ob3](/ss/ob3.png) ![ob4](/ss/ob4.png)
-![ss1](/ss/ss1.jpg)
-![ss2](/ss/ss2.jpg)
-![ss3](/ss/ss3.jpg)
-![ss4](/ss/ss4.jpg)
+![ss1](/ss/ss1.jpg) ![ss2](/ss/ss2.jpg)
+![ss3](/ss/ss3.jpg) ![ss4](/ss/ss4.jpg)
 ![ss5](/ss/ss5.jpg)
