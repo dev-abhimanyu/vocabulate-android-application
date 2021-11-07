@@ -7,6 +7,8 @@ Vocabulate - An android application to improve vocabulary
 * Bookmark difficult words to review them later
 * Learn atleast a new word every day with "Word of the day" notification channel
 * Completely offline
+
+![temp](/ss/temp.png)![temp](/ss/temp.png)![temp](/ss/temp.png)
 ![splash](/ss/splash.png)
 ![ob1](/ss/ob1.png)
 ![ob2](/ss/ob2.png)
