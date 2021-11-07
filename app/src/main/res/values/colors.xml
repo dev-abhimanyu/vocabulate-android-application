@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="splashBackground">#114e57</color><!--5190cc-->
+<!--    487FB2-->
+    <color name="colorBackground">#FFFFFF</color><!--#5190cc-->
+    <color name="countdownColor">#4a4440</color>
+    <color name="countdownEndColor">#f44336</color>        <!--#f44336-->
+    <color name="rightChoice">#1b5e20</color>
+    <color name="wrongChoice">#b71c1c</color>
+
+    <!-- On-boarding Colors-->
+    <!-- Screens background color-->
+    <color name="bg_screen1">#f9b936</color><!--#f64c73,#ffd235-->
+    <color name="bg_screen2">#f9b936</color><!--#20d2bb-->
+    <color name="bg_screen3">#f9b936</color><!--#3395ff-->
+    <color name="bg_screen4">#f9b936</color><!--#c873f4-->
+
+    <!-- dots inactive colors -->
+    <color name="dot_dark_screen1">#033b3f</color><!--#d1395c-->
+    <color name="dot_dark_screen2">#033b3f</color><!--#14a895-->
+    <color name="dot_dark_screen3">#033b3f</color><!--#2278d4-->
+    <color name="dot_dark_screen4">#033b3f</color><!--#a854d4-->
+
+    <!-- dots active colors -->
+    <color name="dot_light_screen1">#19988b</color><!--#f98da5-->
+    <color name="dot_light_screen2">#19988b</color><!--#8cf9eb-->
+    <color name="dot_light_screen3">#19988b</color><!--#93c6fd-->
+    <color name="dot_light_screen4">#19988b</color><!--#e4b5fc-->
+
+    <array name="array_dot_active">
+        <item>@color/dot_light_screen1</item>
+        <item>@color/dot_light_screen2</item>
+        <item>@color/dot_light_screen3</item>
+        <item>@color/dot_light_screen4</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/dot_dark_screen1</item>
+        <item>@color/dot_dark_screen2</item>
+        <item>@color/dot_dark_screen3</item>
+        <item>@color/dot_dark_screen4</item>
+    </array>
+    <color name="mainBackground1">#54d1c9</color>
+    <!--TROPHY TEXT COLORS-->
+    <color name="bronze_trophy_text">#BF7225</color>
+    <color name="silver_trophy_text">#8C8C8C</color>
+    <color name="gold_trophy_text">#FFD400</color>
+</resources>

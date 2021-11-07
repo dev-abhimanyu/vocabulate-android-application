@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/checked_bg2"
+    tools:context=".QuizActivity">
+    <!--bg=#A5D1D8-->
+
+    <ImageView
+        android:id="@+id/scoreTrophy"
+        android:layout_width="71dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/notepadHead"
+        app:layout_constraintStart_toStartOf="@+id/notepadPad"
+        app:srcCompat="@drawable/bronze_trophy" />
+
+    <!---width and height=66dp-->
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:indeterminate="false"
+        android:max="30"
+        android:progress="30"
+        android:progressDrawable="@drawable/circular_progress_bar"
+        android:rotationX="180"
+        app:layout_constraintBottom_toBottomOf="@+id/stopWatchFrame"
+        app:layout_constraintEnd_toEndOf="@+id/stopWatchFrame"
+        app:layout_constraintStart_toStartOf="@+id/stopWatchFrame"
+        app:layout_constraintTop_toTopOf="@+id/stopWatchFrame" />
+
+    <ImageView
+        android:id="@+id/stopWatchFrame"
+        android:layout_width="71dp"
+        android:layout_height="75dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/notepadHead"
+        app:layout_constraintEnd_toEndOf="@+id/notepadPad"
+        app:srcCompat="@drawable/stopwatch" />
+
+
+    <ImageView
+        android:id="@+id/notepadHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-5dp"
+        android:layout_marginTop="180dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/notepad_head" />
+
+    <ImageView
+        android:id="@+id/notepadPad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-5dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notepadHead"
+        app:srcCompat="@drawable/notepad_pad" />
+
+    <ImageView
+        android:id="@+id/bookmarkPng"
+        android:layout_width="41dp"
+        android:layout_height="61dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/notepadPad"
+        app:layout_constraintTop_toBottomOf="@+id/notepadHead"
+        app:srcCompat="@drawable/bookmark_png" />
+    <!--bookmarks: width= 41dp, height=61dp-->
+
+    <TextView
+        android:id="@+id/text_view_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:freezesText="true"
+        android:text="0"
+        android:textColor="@color/bronze_trophy_text"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/scoreTrophy"
+        app:layout_constraintEnd_toEndOf="@+id/scoreTrophy"
+        app:layout_constraintStart_toStartOf="@+id/scoreTrophy"
+        app:layout_constraintTop_toTopOf="@+id/scoreTrophy"
+        app:layout_constraintVertical_bias="0.38" />
+
+    <com.abhimanyu.vocabulate.like.LikeButtonView
+        android:id="@+id/starLike"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/bookmarkPng"
+        app:layout_constraintEnd_toEndOf="@+id/bookmarkPng"
+        app:layout_constraintStart_toStartOf="@+id/bookmarkPng"
+        app:layout_constraintTop_toTopOf="@+id/bookmarkPng"
+        />
+
+    <TextView
+        android:id="@+id/text_view_question_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:freezesText="true"
+        android:text="Question: 1/x"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="@+id/text_view_score"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_score"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/text_view_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:freezesText="true"
+        android:text="Category: "
+        android:textColor="@android:color/black"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/text_view_difficulty"
+        app:layout_constraintEnd_toStartOf="@+id/text_view_difficulty"
+        app:layout_constraintStart_toStartOf="@+id/text_view_difficulty"
+        app:layout_constraintTop_toTopOf="@+id/text_view_difficulty" />
+
+    <TextView
+        android:id="@+id/text_view_difficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:freezesText="true"
+        android:text="Difficulty: "
+        android:textColor="@android:color/black"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--layout_width=0dp for word-->
+
+    <TextView
+        android:id="@+id/text_view_countdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:freezesText="true"
+        android:text="30"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/stopWatchFrame"
+        app:layout_constraintEnd_toEndOf="@+id/stopWatchFrame"
+        app:layout_constraintStart_toStartOf="@+id/stopWatchFrame"
+        app:layout_constraintTop_toTopOf="@+id/stopWatchFrame" />
+
+    <TextView
+        android:id="@+id/text_view_question"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="-10dp"
+        android:freezesText="true"
+        android:text="Here will be the word"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/notepadPad"
+        app:layout_constraintStart_toStartOf="@+id/notepadPad"
+        app:layout_constraintTop_toTopOf="@+id/notepadPad" />
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="@+id/notepadPad"
+        app:layout_constraintTop_toBottomOf="@+id/word_underline">
+
+        <RadioButton
+            android:id="@+id/radio_button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:freezesText="true"
+            android:text="Option 1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_question" />
+
+        <RadioButton
+            android:id="@+id/radio_button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:freezesText="true"
+            android:text="Option 2"
+            app:layout_constraintStart_toStartOf="@+id/radio_button1"
+            app:layout_constraintTop_toBottomOf="@+id/radio_button1" />
+
+        <RadioButton
+            android:id="@+id/radio_button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:freezesText="true"
+            android:text="Option 3"
+            app:layout_constraintStart_toStartOf="@+id/radio_button2"
+            app:layout_constraintTop_toBottomOf="@+id/radio_button2" />
+
+    </RadioGroup>
+
+
+    <Button
+        android:id="@+id/button_confirm_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:freezesText="true"
+        android:text="confirm"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="@+id/smallDivider1"
+        app:layout_constraintHorizontal_bias="0.551"
+        app:layout_constraintStart_toStartOf="@+id/smallDivider1"
+        app:layout_constraintTop_toBottomOf="@+id/smallDivider1"
+        android:textSize="16sp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="-10dp"
+        app:layout_constraintEnd_toEndOf="@+id/notepadHead"
+        app:layout_constraintStart_toStartOf="@+id/notepadHead"
+        app:layout_constraintTop_toTopOf="@+id/notepadHead">
+
+        <TextView
+            android:id="@+id/letter_v"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="v"
+            android:textColor="#111111"
+            android:textSize="45sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/letter_o"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="o"
+            android:textColor="#111111"
+            android:textSize="45sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/letter_v" />
+
+        <TextView
+            android:id="@+id/letter_c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="c"
+            android:textColor="#111111"
+            android:textSize="45sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/letter_o" />
+
+        <TextView
+            android:id="@+id/letter_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="a"
+            android:textColor="#111111"
+            android:textSize="45sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/letter_c" />
+
+        <TextView
+            android:id="@+id/letter_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="b"
+            android:textColor="#111111"
+            android:textSize="45sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/letter_a" />
+
+        <TextView
+            android:id="@+id/letter_u"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="u"
+            android:textColor="#111111"
+            android:textSize="45sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/letter_b" />
+
+        <TextView
+            android:id="@+id/letter_l"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="l"
+            android:textColor="#111111"
+            android:textSize="45sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/letter_u" />
+
+        <TextView
+            android:id="@+id/letter_a2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="a"
+            android:textColor="#111111"
+            android:textSize="45sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/letter_l" />
+
+        <TextView
+            android:id="@+id/letter_t"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="t"
+            android:textColor="#111111"
+            android:textSize="45sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/letter_a2" />
+
+        <TextView
+            android:id="@+id/letter_e"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="e"
+            android:textColor="#111111"
+            android:textSize="45sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/letter_t" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <ImageView
+        android:id="@+id/word_underline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/notepadPad"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="@+id/notepadPad"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_question"
+        app:srcCompat="@drawable/dashed_divider"
+        />
+
+    <ImageView
+        android:id="@+id/smallDivider1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="@+id/notepadPad"
+        app:layout_constraintStart_toStartOf="@+id/notepadPad"
+        app:layout_constraintTop_toBottomOf="@+id/radio_group"
+        app:srcCompat="@drawable/dashed_divider_small" />
+
+    <ImageView
+        android:id="@+id/smallDivider2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/notepadPad"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="@+id/notepadPad"
+        app:layout_constraintTop_toBottomOf="@+id/button_confirm_next"
+        app:srcCompat="@drawable/dashed_divider_small" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

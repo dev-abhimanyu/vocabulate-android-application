@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Vocabulate</string>
+    <string name='quiz_headinng'>VOCABULATE</string>>
+
+    <!-- On-boarding Strings-->
+
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="previous">PREVIOUS</string>
+    <string name="start">Let\'s Go</string>
+
+    <string name="slide_1_title">Vocabulary made fun!</string>
+    <string name="slide_1_desc">Challenge your lexical skills in an amusive way. You will be given one word and three choices. Choose the option which best defines the word. Sounds simple? Hold that thought ;)</string>
+    <!--An easy and fun way to improve your vocabulary!Learn new words in a classic quiz format-->
+
+    <string name="slide_2_title">Score Higher</string>
+    <string name="slide_2_desc">Preparing for exams like GRE or TOEFL? Our dataset includes an exhaustive set of hand picked high frequency words which are guaranteed to improve your score</string>
+
+    <string name="slide_3_title">Bookmarks</string>
+    <string name="slide_3_desc">Having difficulty remembering a word? Just star the word to bookmark it and swipe to remove it from bookmarks</string>
+
+    <string name="slide_4_title">No network? No problem</string>
+    <string name="slide_4_desc">Totally offline database enables you to learn from anywhere, anytime</string>
+
+    <string name="start_heading">VOCABULATE</string>
+    <string name="no_words_message">Oops! It looks like we ran out of words.\nDon\'t worry, we will be adding more words\nin the future updates.\nMeanwhile you can continue to revise.</string>
+    <string name="empty_bookmarks_message">You don\'t have any bookmarks yet.\nStar the word to bookmark it\nand swipe to remove it from bookmarks.\n\nStart vocabulating now!!</string>
+</resources>
